@@ -251,16 +251,16 @@ end
 --function that saves the items table to a file
 function saveItems()
     io.output("/reubi/items.json")
-    io.write(textutils.serialiseJSON(ITEMS))
+    io.write(textutils.serialise(ITEMS))
 end
 --function that saves the workbench recipes to a file
 function saveAllRecipes()
     io.output("/reubi/recipes.json")
-    io.write(textutils.serialiseJSON(WORKBENCH_CRAFT))
+    io.write(textutils.serialise(WORKBENCH_CRAFT))
     io.output("/reubi/compressor_recipes.json")
-    io.write(textutils.serialiseJSON(COMPRESSOR_CRAFT))
+    io.write(textutils.serialise(COMPRESSOR_CRAFT))
     io.output("/reubi/cutter_recipes.json")
-    io.write(textutils.serialiseJSON(CUTTER_CRAFT))
+    io.write(textutils.serialise(CUTTER_CRAFT))
 end
 --[[
 if fs.exists("/home/test.json") then
